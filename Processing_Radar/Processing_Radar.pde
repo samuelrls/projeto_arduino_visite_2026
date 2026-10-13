@@ -26,7 +26,7 @@ void setup() {
   
  size (1080, 720); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
  smooth();
- myPort = new Serial(this,"COM8", 9600); // starts the serial communication
+ myPort = new Serial(this,"/dev/ttyUSB0", 9600); // starts the serial communication
  myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'. So actually it reads this: angle,distance.
 }
 void draw() {
